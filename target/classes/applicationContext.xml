@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+	<!-- bean id="helloWorld_1" class="net.javaguides.spring.ioc.HelloWorld">
+		<property name="message" value="Hello Traineessdfsdfsd!" />
+	</bean -->
+	
+	<bean id="helloWorld_2" class="net.javaguides.spring.ioc.HelloWorld" init-method="initialise" destroy-method = "destroy">
+		<constructor-arg index="0" value="Hello, I am the value of constructor injuction."/>
+		<constructor-arg index="1" value="1234"/>
+	</bean>
+</beans>
